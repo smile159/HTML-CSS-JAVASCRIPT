@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* 主容器 */
+.main-content {
+    width: 100vw;
+    height: 100vh;
+    background-color: #fcfdff;
+    display: flex;
+    align-items: center;
+}
+/* 侧边栏 */
+.main-content aside {
+    width: 370px;
+    height: calc(100% - 20px);
+    background-color: #ffffff;
+    /* background-color: pink; */
+    border-radius: 22px;
+    margin-left: 20px;
+    padding: 20px;
+}
+/* 侧边栏-头部 */
+.main-content aside .side-head {
+    display: flex;
+    /* background-color: skyblue; */
+}
+/* 侧边栏-网站图标 */
+.main-content aside .side-head svg {
+    width: 50px;
+    height: 50px;
+}
+/* 侧边栏-网站标题 */
+.main-content aside .side-head h2 {
+    font-size: 30px;
+    margin-left: 15px;
+    align-self: flex-end;
+    letter-spacing: 2px;
+}
+/* 侧边栏-用户信息 */
+.main-content aside .side-suer {
+    display: flex;
+    align-items: center;
+    height: 90px;
+    margin-top: 30px;
+    background-color: skyblue;
+    border-radius: 12px;
+}
+/* 侧边栏-用户信息-头像 */
+.main-content aside .side-suer img {
+    width: 70px;
+    height: 60px;
+    margin-left: 10px;
+}
+/* 侧边栏-用户信息-信息 */
+.main-content aside .side-suer .user-info {
+    margin-left: 5px;
+}
+/* 侧边栏-用户信息-信息-名字 */
+.main-content aside .side-suer .user-info .name {
+    display: block;
+    font-weight: bold;
+    margin-top: -8px;
+}
+/* 侧边栏-用户信息-信息-电话  */
+.main-content aside .side-suer .user-info .phone {
+    margin-top: 12px;
+}
+/* 侧边栏-用户信息-右侧图标容器 */
+.main-content aside .side-suer .svg {
+    display: flex;
+    justify-content: flex-end;
+    flex: 1;
+    margin-right: 15px;
+}
+/* 侧边栏-用户信息-右侧图标 */
+.main-content aside .side-suer .svg svg {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+/* 菜单栏 */
+.main-content aside .options {
+    margin-top: 30px;
+}
+
+.main-content aside .options .item-card .item {
+    display: flex;
+    align-items: center;
+    height: 60px;
+    list-style: none;
+    /* background-color: skyblue; */
+    padding: 8px;
+    margin-top: 10px;
+    border-radius: 8px;
+}
+.item.active {
+    background-color: #e8eefc;
+}
+
+.main-content aside .options .item-card .item svg {
+    width: 30px;
+    height: 30px;
+} 
+
+.main-content aside .options .item-card .item span {
+    margin-left: 20px;
+}
+
+.main-content aside .options .item-card .item:hover {
+    background-color: #e8eefc;
+}
+
+.main-content aside .options .item-card .item:hover svg,
+.main-content aside .options .item-card .item.active svg{
+    animation: fade-in .8s ease-in-out forwards;
+}
+
+/* 淡入动画 */
+@keyframes fade-in {
+    100% {
+        transform: translateX(10px);
+    }
+}
